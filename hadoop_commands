@@ -1,0 +1,5 @@
+Run:
+	hadoop-3.1.1/bin/hadoop jar hadoop-workspace/Word_Count/target/Word_Count-0.0.1-SNAPSHOT.jar mapReduce.Word_Count.WordCount hadoop-workspace/Word_Count/input/ hadoop-workspace/Word_Count/output
+
+
+hadoop-3.1.1/bin/hadoop jar hadoop-workspace/mapReduce/target/mapReduce-0.0.1-SNAPSHOT.jar kmeans_hadoop.mapReduce.KMeans 5 784 hadoop-workspace/mapReduce/input/ hadoop-workspace/mapReduce/output/
