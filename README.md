@@ -22,3 +22,20 @@ When the clusters converge,i.e. centroids doesnt change in two consecutive steps
 Final Clusters thus recieved are visualized in jupyter notebook. The final clusters achieved by training on full MNIST data set
 was 10, as expected. The final clusters are converted into 28*28 pixel format, and forms digit like figures. The visualization
 shows the accuracy of model, and hence the model is capable of detecting any handwritten digit with high accuracy(96+ percent, as tested).
+
+Project Specific notes:
+
+1.This is a maven project.
+To build and install project, run command in folder where pom.xml is located:
+mvn clean install
+
+2.Command to run program: 
+
+General:
+hadoop-3.1.1/bin/hadoop jar <jar with path> <package.className> <num_clusters> <dimenstion> <input_dir> <output_dir>
+
+Specific to my program:
+hadoop-3.1.1/bin/hadoop jar hadoop-workspace/mapReduce/target/mapReduce-0.0.1-SNAPSHOT.jar kmeans_hadoop.mapReduce.KMeans 5 784 hadoop-workspace/mapReduce/input/ hadoop-workspace/mapReduce/output/
+
+
+3.JAVA-Files-Kmeans-with-Input-Output folder contains plain java files to refer. Also, it contains input.txt (mnist data), and output clusters
